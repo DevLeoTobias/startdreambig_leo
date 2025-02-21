@@ -1,0 +1,160 @@
+.body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+/* css do navbar mobile */
+.navbar-collapse {
+  background-color: rgb(0, 0, 0); /* Fundo preto no menu mobile */
+  text-align: center;
+}
+
+/* Garante que os links fiquem visíveis no mobile */
+.navbar-nav .nav-link {
+  color: white !important;
+  font-family: "Inter", sans-serif; /* Mesma fonte do site */
+  font-size: 16px;
+}
+.navbar-nav .nav-link:hover {
+  color: rgb(255, 225, 0) !important; /* Texto branco */
+  font-family: "Inter", sans-serif; /* Ajustar a mesma fonte do site */
+}
+
+.dropdown-menu {
+  background-color: black !important; /* Fundo preto no dropdown */
+}
+
+/* Garante que os itens do dropdown fiquem visíveis */
+.dropdown-menu .dropdown-item {
+  color: white !important;
+  font-size: 14px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #ffd0007e !important; /* Cor de hover para melhor visibilidade */
+}
+.navbar-collapse ul {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.img_header {
+  width: 100%;
+}
+.container p {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Remove a seta (caret) do dropdown */
+.dropdown-toggle::after {
+  display: none !important;
+}
+.container h2 {
+  color: #121212;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.galeria-container h2 {
+  font-size: 3rem;
+}
+@media (max-width: 768px) {
+  .galeria-container h2 {
+    font-size: 2rem;
+  }
+}
+.container h4 {
+  line-height: 28px;
+  font-weight: 700;
+  color: #3f83bf;
+  font-size: 20px;
+}
+.container h2 {
+  line-height: 50px;
+  font-weight: 700;
+  color: #121212;
+  font-size: 45px;
+}
+.container p {
+  line-height: 27px;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+.main-footer p {
+  font-size: 10px;
+}
+
+.card-body p {
+  font-size: 16px;
+  font-size: medium;
+}
+
+.carousel-item img {
+  max-height: 500px; /* Ajuste conforme necessário */
+  object-fit: cover;
+}
+.container-empower .row .col-md-6 p {
+  justify-content: flex-end;
+}
+.main-3 {
+  background-color: #78777700;
+  width: 100%;
+  max-height: fit-content;
+  padding: 0px;
+}
+.img-hover-shadow {
+  transition: box-shadow 0.3s ease-in-out;
+}
+.img-hover-shadow:hover {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.img_kid {
+  height: 100%; /* Ajusta a altura da div */
+}
+
+.img_kid img {
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher sem distorcer */
+}
+
+/* Definindo diferentes alturas */
+.card-grande {
+  min-height: 400px;
+}
+.card-medio {
+  min-height: 380px;
+}
+.card-pequeno {
+  min-height: 360px;
+}
+
+/* Garante que os cards ocupem toda a altura da div */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+.card-body {
+  flex-grow: 1;
+}
+
+.main-footer {
+  background-color: #000000;
+}
+
+.main-footer p {
+  color: #ffffff;
+}
+
+
+/* aqui comeca  estilo da pagina about */
+.banner-area {  
+ 
+ 
+}
+
