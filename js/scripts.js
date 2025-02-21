@@ -79,3 +79,27 @@ function changeImage(src) {
       updateCount();
     });
   });
+// script para menu hamburguer
+document.addEventListener("DOMContentLoaded", function () {
+    var dropdowns = document.querySelectorAll(".dropdown-toggle");
+    var navbarCollapse = document.querySelector(".navbar-collapse");
+  
+    dropdowns.forEach(function (dropdown) {
+      dropdown.addEventListener("click", function (event) {
+        if (window.innerWidth <= 992) {
+          event.preventDefault();
+          let menu = this.nextElementSibling;
+          if (menu.style.display === "block") {
+            menu.style.display = "none";
+          } else {
+            // Fecha todos os dropdowns antes de abrir o novo
+            document.querySelectorAll(".dropdown-menu").forEach(function (el) {
+              el.style.display = "none";
+            });
+            menu.style.display = "block";
+          }
+        }
+      });
+    });
+  
+});       
