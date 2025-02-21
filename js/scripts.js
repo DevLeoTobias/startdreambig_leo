@@ -61,24 +61,26 @@ function changeImage(src) {
 
 // Script para animação de contagem 
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const counters = document.querySelectorAll(".counter");
-    counters.forEach(counter => {
-      const updateCount = () => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
-        const increment = target / 100;
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".counter");
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      let count = +counter.innerText;
+      const increment = target / 100;
 
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 10);
-        } else {
-          counter.innerText = target;
-        }
-      };
-      updateCount();
-    });
+      if (count < target) {
+        count += increment;
+        counter.innerText = Math.ceil(count); // arredonda para o inteiro mais próximo
+        setTimeout(updateCount, 50); // o delay pode ser ajustado para um efeito mais suave
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
   });
+});
+
 
 
 
@@ -120,4 +122,4 @@ dropdowns.forEach(function (dropdown) {
       });
     }
   });
-});  // Agora o fechamento da função está correto
+ // Agora o fechamento da função está correto
