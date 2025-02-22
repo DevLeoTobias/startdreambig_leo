@@ -149,18 +149,18 @@
     </nav>
 
     <!-- Masthead-->
-    <section class="page-section" id="about">
+    <section class="page-section pb-3" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <p>KNOW MORE</p>
-            <h2 class="section-heading text-uppercase">ABOUT US</h2>
+            <p><!-- espaco livre --></p>
+            <h2 class="section-heading text-uppercase">FOUNDERS</h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet consectetur.
+              <!-- espaco livre -->
             </h3>
           </div>
           <div class="row">
-            <div class="col-md-6 text-center" style="border: #000 1px solid">
+            <div class="col-md-6 text-center">
               <h3>Husband and Wife Team</h3>
               <p>
                 Jeferson and Suzanne met in Brazil, in 2005, where together they
@@ -195,7 +195,7 @@
                 websites.
               </p>
             </div>
-            <div class="col-md-6" style="border: #ff0000 1px solid">
+            <div class="col-md-6" >
               <div class="fotos">
                 <img
                   class="img-fluid rounded shadow mt-3 w-100"
@@ -208,16 +208,91 @@
         </div>
       </div>
     </section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <a href="https://ywam.org/" target="_blank" class="btn">
+            <img src="./assets/img/about/ywam.png" alt="logo da ywam" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--gallery founders-->
+    <div class="container mt-4 text-center">      
+      <!-- Galeria de Imagens -->
+      <div class="gallery-container">
+          <img src="./assets/img/about/founders_1.jpg" alt=" Jeferson com 2 indios da tribo pataxo em missao missionaria " data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('./assets/img/about/founders_1.jpg')">
+          <img src="./assets/img/about/founders_2.jpg" alt="Suzanne com 4 meninas em missao missionaria" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('./assets/img/about/founders_2.jpg')">
+          <img src="./assets/img/about/founders_3.jpg" alt="Jeferson com 3 indios pataxo em missao missionaria" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('./assets/img/about/founders_3.jpg')">
+          <img src="./assets/img/about/founders_4.jpg" alt="crincas indigenas" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('./assets/img/about/founders_4.jpg')">
+          <img src="./assets/img/about/founders_5.jpg" alt="jeferson com um bebe indígena no colo em missao missionaria" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('./assets/img/about/founders_5.jpg')">
+          <img src="./assets/img/about/founders_6.jpg" alt="Suzanne com 2 criancas em missao missionaria" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('./assets/img/about/founders_6.jpg')">
+          <img src="./assets/img/about/founders_7.jpg" alt="Jeferson com 3 criancas em missao missionaria" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="changeImage('./assets/img/about/founders_7.jpg')">
+      </div>
+  </div>
+  <!-- Modal para Ampliar Imagem -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-body text-center">
+                  <img id="modalImage" class="modal-img" src="" alt="Imagem Ampliada">
+              </div>
+              <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+      </div>
+  </div>
+    
     <!--footer do site -->
     <footer>
       <section class="main-footer">
         <div class="container text-center">
+          <div class="d-flex flex-wrap justify-content-center py-2">
+            <!-- FACEBOOK -->
+            <a
+              href="https://www.facebook.com/startdreambig"
+              target="_blank"
+              class="d-flex align-items-center text-decoration-none text-dark py-2 mx-2"
+            >
+              <i class="bi bi-facebook fa-2x pe-2"></i>
+              <span class="d-none d-sm-inline"></span>
+            </a>
+            <!-- INSTAGRAM -->
+            <a
+              href="https://www.instagram.com/startdreambig/"
+              target="_blank"
+              class="d-flex align-items-center text-decoration-none text-dark py-2 mx-2"
+            >
+              <i class="fab fa-instagram fa-2x pe-2"></i>
+              <span class="d-none d-sm-inline"></span>
+            </a>
+            <!-- YOUTUBE -->
+            <a
+              href="https://www.youtube.com/channel/UCknYIaLCOFsRmLz_5_V-eNQ"
+              target="_blank"
+              class="d-flex align-items-center text-decoration-none text-dark py-2 mx-2"
+            >
+              <i class="fab fa-youtube fa-2x pe-2"></i>
+              <span class="d-none d-sm-inline"></span>
+            </a>
+            <!-- TWITTER -->
+            <a
+              href="https://x.com/startdreambig"
+              target="_blank"
+              class="d-flex align-items-center text-decoration-none text-dark py-2 mx-2"
+            >
+              <i class="bi bi-twitter-x fa-2x pe-2"></i>
+              <span class="d-none d-sm-inline"></span>
+            </a>
+          </div>
+        </div>
+        <div class="container text-center">
           <div class="row">
-            <div class="col-md-3">link</div>
+            <div class="col-12 col-md-3"></div>
+            <!--link ou espaco lado Direito-->
             <div class="col-md-6">
               <img src="./assets/img/about/logo-footer.png" alt="logo-footer" />
             </div>
-            <div class="col-md-3">link</div>
+            <div class="col-md-3"><!--link ou espaco lado esquerdo--></div>
           </div>
         </div>
         <hr />
