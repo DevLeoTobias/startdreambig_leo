@@ -54,12 +54,11 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-//galeria 
 document.addEventListener("DOMContentLoaded", function () {
-  // Inicialização de variáveis
-  const dropdowns = document.querySelectorAll('.dropdown');
-  const navbarToggler = document.getElementById('navbar-toggler');
-  const navbarCollapse = document.getElementById('navbar-collapse');
+  // Seleção de elementos
+  const navbarToggler = document.getElementById("navbar-toggler");
+  const navbarCollapse = document.getElementById("navbar-collapse");
+  const dropdowns = document.querySelectorAll(".dropdown-toggle");
 
   // Animação de contagem
   const counters = document.querySelectorAll(".counter");
@@ -72,50 +71,44 @@ document.addEventListener("DOMContentLoaded", function () {
       if (count < target) {
         count += increment;
         counter.innerText = Math.ceil(count);
-        setTimeout(updateCount, 50); // ajuste no tempo de delay
+        setTimeout(updateCount, 50); // Ajuste no tempo de delay
       } else {
         counter.innerText = target;
       }
     };
     updateCount();
   });
-   });
 
-  // Lógica do dropdown
-  dropdowns.forEach(function (dropdown) {
+  // Garante que o menu não feche ao clicar nos dropdowns no mobile
+  dropdowns.forEach(dropdown => {
     dropdown.addEventListener("click", function (event) {
       if (window.innerWidth <= 992) {
         event.preventDefault();
         let menu = this.nextElementSibling;
-        if (menu.style.display === "block") {
-          menu.style.display = "none";
-        } else {
-          // Fecha todos os dropdowns antes de abrir o novo
-          document.querySelectorAll(".dropdown-menu").forEach(function (el) {
-            el.style.display = "none";
-          });
-          menu.style.display = "block";
-        }
+        menu.classList.toggle("show");
+        event.stopPropagation(); // Impede que o clique feche o menu principal
       }
     });
-  });
-
-  // Fecha os dropdowns quando o menu hambúrguer é fechado
-  navbarToggler.addEventListener("click", function () {
-    if (!navbarCollapse.classList.contains("show")) {
-      document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-        menu.style.display = "none";
-      });
-    }
   });
 
   // Fecha os dropdowns ao clicar fora da navbar
   document.addEventListener("click", function (event) {
     if (!event.target.closest(".navbar")) {
-      document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-        menu.style.display = "none";
+      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.classList.remove("show");
       });
     }
   });
 
-}); 
+  // Impede que o menu feche ao clicar dentro do navbarCollapse
+  navbarCollapse.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+
+  // Controla a abertura e fechamento do menu hambúrguer
+  if (navbarToggler && navbarCollapse) {
+    navbarToggler.addEventListener("click", function () {
+      navbarCollapse.classList.toggle("show"); // Adiciona/Remove a classe show no menu
+    });
+  }
+});
