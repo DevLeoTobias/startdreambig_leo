@@ -55,13 +55,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 //galeria 
-function changeImage(src) {
-    document.getElementById('modalImage').src = src;
-}
-
-// Script para animação de contagem 
-
 document.addEventListener("DOMContentLoaded", function () {
+  // Inicialização de variáveis
+  const dropdowns = document.querySelectorAll('.dropdown');
+  const navbarToggler = document.getElementById('navbar-toggler');
+  const navbarCollapse = document.getElementById('navbar-collapse');
+
+  // Animação de contagem
   const counters = document.querySelectorAll(".counter");
   counters.forEach(counter => {
     const updateCount = () => {
@@ -71,23 +71,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (count < target) {
         count += increment;
-        counter.innerText = Math.ceil(count); // arredonda para o inteiro mais próximo
-        setTimeout(updateCount, 50); // o delay pode ser ajustado para um efeito mais suave
+        counter.innerText = Math.ceil(count);
+        setTimeout(updateCount, 50); // ajuste no tempo de delay
       } else {
         counter.innerText = target;
       }
     };
     updateCount();
   });
-});
+   });
 
-
-
-
-
-  
-// Lógica de dropdown
-dropdowns.forEach(function (dropdown) {
+  // Lógica do dropdown
+  dropdowns.forEach(function (dropdown) {
     dropdown.addEventListener("click", function (event) {
       if (window.innerWidth <= 992) {
         event.preventDefault();
@@ -122,4 +117,5 @@ dropdowns.forEach(function (dropdown) {
       });
     }
   });
- // Agora o fechamento da função está correto
+
+}); 
