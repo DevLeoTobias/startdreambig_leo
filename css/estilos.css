@@ -165,7 +165,7 @@
 }
 
 /* aqui comeca  estilo da pagina about */
-.about p {
+.about,.team p {
   color: #939393;
   font-size: 20px;
   font-weight: 700;
@@ -207,3 +207,10 @@
   width: 100%;
   height: auto;
 }
+/* aqui e estilo team */
+.card-title a {
+  color: #000000;
+  text-decoration: none;
+  
+}
+
