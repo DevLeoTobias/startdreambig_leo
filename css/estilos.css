@@ -221,3 +221,11 @@
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+.workshop h2{
+  color: #3f83bf;
+  font-size: 20px;
+}
+.special-msg h2{
+  color: #000000;
+  font-size: 20px;
+}
