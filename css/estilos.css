@@ -213,4 +213,11 @@
   text-decoration: none;
   
 }
-
+/* aqui e estilo  calendar*/
+.calendar{
+  color: #000000;
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
