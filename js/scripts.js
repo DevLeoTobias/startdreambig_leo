@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (count < target) {
         count += increment;
         counter.innerText = Math.ceil(count);
-        setTimeout(updateCount, 60); // ajuste no tempo de delay
+        setTimeout(updateCount, 120); // ajuste no tempo de delay
       } else {
         counter.innerText = target;
       }
