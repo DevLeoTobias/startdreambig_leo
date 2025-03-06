@@ -175,105 +175,138 @@
     </nav>
 
     <!-- Masthead-->
-    <aside
-      class="masthead position-fixed end-0 top-0 bg-light shadow p-3 overflow-auto d-none d-md-block"
-      style="
-        width: 15vw;
-        min-width: 250px;
-        font-size: 0.85rem;
-        max-height: 90vh;
-      "
-    >
-      <section class="page-section">
-        <div class="container mt-2">         
-          <hr />
-          <h1 class="text-center">Archives</h1>
-          <hr />
-          <ul class="timeline-3 list-unstyled ps-4">
-            <!-- Adicione mais itens para testar a rolagem -->
-            <li class="mb-2">
-              <a href="./timeline.html" class="d-block"
-                >First Python Code BootCamp</a
-              >
-              <small class="text-muted">November 19, 2019</small>
-            </li>
-            <li class="mb-2">
-              <a href="./timeline2.html" class="d-block"
-                >Planting seeds of courage, hope and love</a
-              >
-              <small class="text-muted">October 28, 2019</small>
-            </li>
-            <li class="mb-2">
-              <a href="#!" class="d-block">AI & Machine Learning</a>
-              <small class="text-muted">August 23, 2022</small>
-            </li>
-            <li class="mb-2">
-              <a href="#!" class="d-block">Cyber Security Workshop</a>
-              <small class="text-muted">July 5, 2023</small>
-            </li>
-            <li class="mb-2">
-              <a href="#!" class="d-block">Advanced JavaScript</a>
-              <small class="text-muted">June 12, 2023</small>
-            </li>
-            <!-- Adicione mais itens conforme necessário -->
-          </ul>
-        </div>
-      </section>
-    </aside>
 
-    <section class="page-section" >
-      <div class="container">
-        <div class="text-center">
-          <h3>First Python Code BootCamp at George Sim Community Center.</h3>
-         <div class=" row " >
-          <div class="col-6-md-4">
-           <p style="text-align: center">
-            Planting seeds of courage, hope and love. What an amazing Graduation
-            ceremony we had this past Saturday for our Robotics Class Level 1
-            and 2.<br> Seeing all the family and community support was the best
-            part. This next generation will impact the world for the better
-          </p>
+    <!-- Botão flutuante para abrir o aside no mobile -->
+    <button
+      class="btn btn-dark position-fixed bottom-3 end-3 d-md-none"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#sidebarOffcanvas"
+      aria-controls="sidebarOffcanvas"
+      style="z-index: 1050; border-radius: 50%; padding: 10px 15px; bottom: 820px;"
+    >
+      ☰
+    </button>
+
+    <!-- Sidebar para Desktop (fixo) e Mobile (offcanvas) -->
+    <div class="container-fluid">
+      <div class="row">
+        <aside
+          id="sidebarOffcanvas"
+          class="masthead offcanvas-md offcanvas-end bg-light shadow p-3 mt-5"
+          style="
+            width: 15vw;
+            min-width: 250px;
+            font-size: 0.85rem;
+            max-height: 90vh;
+          "
+          tabindex="-1"
+          aria-labelledby="sidebarOffcanvasLabel"
+        >
+          <div class="offcanvas-header d-md-none">
+            <h5 id="sidebarOffcanvasLabel" class="offcanvas-title">Archives</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
-        <div class="col-6-md-6">
-          <p class="m-0 mt-2" style="color: rgb(88, 88, 88); font-size: 0.8rem">
-            October 28, 2019 startdreambig.org
-          </p>
-          <img
-            class="img-fluid rounded shadow mt-1 w-50"
-            src="./assets/img/timeline/October 28, 2019/bolo.jpg"
-            alt="Graduation cake"
-          />
-          <img
-            class="img-fluid rounded shadow mt-3 w-50"
-            src="./assets/img/timeline/October 28, 2019/img-1.jpg"
-            alt="Graduation ceremony"
-          />
-          <img
-            class="img-fluid rounded shadow mt-3 w-50"
-            src="./assets/img/timeline/October 28, 2019/img-3.jpg"
-            alt="Graduation ceremony"
-          />
-          <img
-            class="img-fluid rounded shadow mt-3 w-50"
-            src="./assets/img/timeline/October 28, 2019/img-2.jpg"
-            alt="Graduation ceremony"
-          />
-          <img
-            class="img-fluid rounded shadow mt-3 w-50"
-            src="./assets/img/timeline/October 28, 2019/img-4.jpg"
-            alt="Graduation ceremony"
-          />
-          <img
-            class="img-fluid rounded shadow mt-3 w-50"
-            src="./assets/img/timeline/October 28, 2019/img-5.jpg"
-            alt="Graduation ceremony"
-          />
-        </div>
-        <hr />         
-      </div>  
+
+          <section class="page-section">
+            <div class="container mt-2">
+              
+              <h1 class="text-center d-none d-md-block">Archives</h1>
+              
+              <ul class="timeline-3 list-unstyled ps-4">
+                <li class="mb-2">
+                  <a href="./timeline.html" class="d-block"
+                    >First Python Code BootCamp</a
+                  >
+                  <small class="text-muted">November 19, 2019</small>
+                </li>
+                <li class="mb-2">
+                  <a href="./timeline2.html" class="d-block"
+                    >Planting seeds of courage, hope and love</a
+                  >
+                  <small class="text-muted">October 28, 2019</small>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="d-block">AI & Machine Learning</a>
+                  <small class="text-muted">August 23, 2022</small>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="d-block">Cyber Security Workshop</a>
+                  <small class="text-muted">July 5, 2023</small>
+                </li>
+                <li class="mb-2">
+                  <a href="#!" class="d-block">Advanced JavaScript</a>
+                  <small class="text-muted">June 12, 2023</small>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </aside>
+        <main class="col-md-9">
+          <section class="page-section">
+            <div class="container mt-2">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1 class="text-center">Planting seeds of courage, hope and love</h1>
+                </div>
+                <div class="col-6-md-4">
+                  <p style="text-align: center">
+                    Planting seeds of courage, hope and love. What an amazing
+                    Graduation ceremony we had this past Saturday for our Robotics
+                    Class Level 1 and 2.<br />
+                    Seeing all the family and community support was the best part.
+                    This next generation will impact the world for the better
+                  </p>
+                </div>
+                <div class="col-6-md-6 text-center">
+                  <p
+                    class="m-0 mt-2"
+                    style="color: rgb(88, 88, 88); font-size: 0.8rem"
+                  >
+                    October 28, 2019 startdreambig.org
+                  </p>
+                  <img
+                    class="img-fluid rounded shadow mt-1 w-50"
+                    src="./assets/img/timeline/October 28, 2019/bolo.jpg"
+                    alt="Graduation cake"
+                  />
+                  <img
+                    class="img-fluid rounded shadow mt-3 w-50"
+                    src="./assets/img/timeline/October 28, 2019/img-1.jpg"
+                    alt="Graduation ceremony"
+                  />
+                  <img
+                    class="img-fluid rounded shadow mt-3 w-50"
+                    src="./assets/img/timeline/October 28, 2019/img-3.jpg"
+                    alt="Graduation ceremony"
+                  />
+                  <img
+                    class="img-fluid rounded shadow mt-3 w-50"
+                    src="./assets/img/timeline/October 28, 2019/img-2.jpg"
+                    alt="Graduation ceremony"
+                  />
+                  <img
+                    class="img-fluid rounded shadow mt-3 w-50"
+                    src="./assets/img/timeline/October 28, 2019/img-4.jpg"
+                    alt="Graduation ceremony"
+                  />
+                  <img
+                    class="img-fluid rounded shadow mt-3 w-50"
+                    src="./assets/img/timeline/October 28, 2019/img-5.jpg"
+                    alt="Graduation ceremony"
+                  />
+                </div>
+              </div>
+              </div>            
+          </section>
+        </main>
+              
       </div>
-      </div> 
-    </section>
+    </div>
 
     <!--footer do site -->
     <footer>

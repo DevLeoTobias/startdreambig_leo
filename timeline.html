@@ -174,103 +174,130 @@
       </div>
     </nav>
 
-    <!-- Masthead-->
-    <aside
-      class="masthead position-fixed end-0 top-0 bg-light shadow p-3 overflow-auto d-none d-md-block"
-      style="
-        width: 15vw;
-        min-width: 250px;
-        font-size: 0.85rem;
-        max-height: 90vh;
-      "
-    >
-      <section class="page-section">
-        <div class="container mt-2">          
-          <hr />
-          <h1 class="text-center">Archives</h1>
-          <hr />
-          <ul class="timeline-3 list-unstyled ps-4">
-            <!-- Adicione mais itens para testar a rolagem -->
-            <li class="mb-2">
-              <a href="./timeline.html" class="d-block"
-                >First Python Code BootCamp</a
-              >
-              <small class="text-muted">November 19, 2019</small>
-            </li>
-            <li class="mb-2">
-              <a href="./timeline2.html" class="d-block"
-                >Planting seeds of courage, hope and love</a
-              >
-              <small class="text-muted">October 28, 2019</small>
-            </li>
-            <li class="mb-2">
-              <a href="#!" class="d-block">AI & Machine Learning</a>
-              <small class="text-muted">August 23, 2022</small>
-            </li>
-            <li class="mb-2">
-              <a href="#!" class="d-block">Cyber Security Workshop</a>
-              <small class="text-muted">July 5, 2023</small>
-            </li>
-            <li class="mb-2">
-              <a href="#!" class="d-block">Advanced JavaScript</a>
-              <small class="text-muted">June 12, 2023</small>
-            </li>
-            <!-- Adicione mais itens conforme necessário -->
-          </ul>
-        </div>
-      </section>
-    </aside>
+    <!-- Botão flutuante para abrir o aside no mobile -->
+<button
+class="btn btn-dark position-fixed bottom-3 end-3 d-md-none"
+data-bs-toggle="offcanvas"
+data-bs-target="#sidebarOffcanvas"
+aria-controls="sidebarOffcanvas"
+style="z-index: 1050; border-radius: 50%; padding: 10px 15px; bottom: 820px"
+>
+☰
+</button>
+
+<!-- Sidebar para Desktop (fixo) e Mobile (offcanvas) -->
+<div class="container-fluid">
+<div class="row">
+  <aside
+    id="sidebarOffcanvas"
+    class="masthead offcanvas-md offcanvas-end bg-light shadow p-3 mt-5"
+    style="
+      width: 15vw;
+      min-width: 250px;
+      font-size: 0.85rem;
+      max-height: 90vh;
+    "
+    tabindex="-1"
+    aria-labelledby="sidebarOffcanvasLabel"
+  >
+    <div class="offcanvas-header d-md-none">
+      <h5 id="sidebarOffcanvasLabel" class="offcanvas-title">Archives</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
 
     <section class="page-section">
-      <div class="container">
-        <div class="text-center">
-          <h3>First Python Code BootCamp at George Sim Community Center.</h3>
-          <div class="row">
-            <div class="col-6-md-4">
-              <p style="text-align: center "  >
-                Start Dream Big successfully had the First Python Code BootCamp
-                last Saturday at George Sim Community Center. These amazing Kids
-                had the experience of developing a computer game. Isn’t that
-                cool ? 🕹 A Special Thank You to @eric.guerra@innovatesac and
-                @sacramento_sal for your support and collaboration in helping
-                make this happen, bringing hope and opportunity for all in our
-                Community
-              </p>
-            </div>
-            <div class="col-6-md-6">
-              <p
-                class="m-0 mt-2"
-                style="color: rgb(88, 88, 88); font-size: 0.8rem"
-              >
-              November 19, 2019 startdreambig.org
-              </p>
-          <img
-            class="img-fluid rounded shadow mt-1 w-50"
-            src="./assets/img/timeline/python_2019/img_certificado.jpg"
-            alt="kids with certeficate"
-          />
-          <img
-            class="img-fluid rounded shadow mt-3 w-50"
-            src="./assets/img/timeline/python_2019/img_2.jpg"
-            alt="kids with certeficate"
-          />
-          <img
-            class="img-fluid rounded shadow mt-3 w-50"
-            src="./assets/img/timeline/python_2019/img_3.jpg"
-            alt="kids with certeficate"
-          />
-          <img
-            class="img-fluid rounded shadow mt-3 w-50"
-            src="./assets/img/timeline/python_2019/img_4.jpg"
-            alt="kids with certeficate"
-          />
-        </div>
-        <hr />
-          </div>
-        </div> 
+      <div class="container mt-2">
+        <h1 class="text-center d-none d-md-block">Archives</h1>
 
+        <ul class="timeline-3 list-unstyled ps-4">
+          <li class="mb-2">
+            <a href="./timeline.html" class="d-block"
+              >First Python Code BootCamp</a
+            >
+            <small class="text-muted">November 19, 2019</small>
+          </li>
+          <li class="mb-2">
+            <a href="./timeline2.html" class="d-block"
+              >Planting seeds of courage, hope and love</a
+            >
+            <small class="text-muted">October 28, 2019</small>
+          </li>
+          <li class="mb-2">
+            <a href="#!" class="d-block">AI & Machine Learning</a>
+            <small class="text-muted">August 23, 2022</small>
+          </li>
+          <li class="mb-2">
+            <a href="#!" class="d-block">Cyber Security Workshop</a>
+            <small class="text-muted">July 5, 2023</small>
+          </li>
+          <li class="mb-2">
+            <a href="#!" class="d-block">Advanced JavaScript</a>
+            <small class="text-muted">June 12, 2023</small>
+          </li>
+        </ul>
       </div>
     </section>
+  </aside>
+  <!-- Conteúdo principal da página -->
+  <main class="col-md-9">
+    <section class="page-section">
+      <div class="container mt-2">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-center">
+              First Python Code BootCamp at George Sim Community Center.
+            </h1>
+          </div>
+          <div class="col-6-md-4">
+            <p style="text-align: center">
+              Start Dream Big successfully had the First Python Code BootCamp
+              last Saturday at George Sim Community Center. These amazing Kids
+              had the experience of developing a computer game. Isn’t that
+              cool ? 🕹 A Special Thank You to @eric.guerra@innovatesac and
+              @sacramento_sal for your support and collaboration in helping
+              make this happen, bringing hope and opportunity for all in our
+              Community
+            </p>
+          </div>
+          <div class="col-6-md-6 text-center">
+            <p
+              class="m-0 mt-2"
+              style="color: rgb(88, 88, 88); font-size: 0.8rem"
+            >
+              November 19, 2019 startdreambig.org
+            </p>
+            <img
+              class="img-fluid rounded shadow mt-1 w-50"
+              src="./assets/img/timeline/python_2019/img_certificado.jpg"
+              alt="kids with certeficate"
+            />
+            <img
+              class="img-fluid rounded shadow mt-3 w-50"
+              src="./assets/img/timeline/python_2019/img_2.jpg"
+              alt="kids with certeficate"
+            />
+            <img
+              class="img-fluid rounded shadow mt-3 w-50"
+              src="./assets/img/timeline/python_2019/img_3.jpg"
+              alt="kids with certeficate"
+            />
+            <img
+              class="img-fluid rounded shadow mt-3 w-50"
+              src="./assets/img/timeline/python_2019/img_4.jpg"
+              alt="kids with certeficate"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</div>
 
     <!--footer do site -->
     <footer>

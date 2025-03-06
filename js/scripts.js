@@ -101,5 +101,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImage = document.getElementById('modalImage');
   modalImage.src = imagePath;
 }
+ 
+//botao para nav do aside
+document.getElementById("toggleAside").addEventListener("click", function () {
+    document.getElementById("sidebar").style.transform = "translateX(0)";
+  });
 
+  document.getElementById("closeAside").addEventListener("click", function () {
+    document.getElementById("sidebar").style.transform = "translateX(100%)";
+  });
   
