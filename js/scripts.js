@@ -110,4 +110,13 @@ document.getElementById("toggleAside").addEventListener("click", function () {
   document.getElementById("closeAside").addEventListener("click", function () {
     document.getElementById("sidebar").style.transform = "translateX(100%)";
   });
-  
+  //modal galeria
+  function openModal(imageSrc) {
+    document.getElementById('modalImage').src = imageSrc;
+}
+function openModal(imageSrc) {
+  const modalImage = document.getElementById('modalImage');
+  if (modalImage.src !== imageSrc) {
+      modalImage.src = imageSrc;
+  }
+}

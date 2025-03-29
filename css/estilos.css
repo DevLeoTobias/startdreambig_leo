@@ -268,7 +268,17 @@ ul.timeline-3 > li:before {
   height: 20px;
   z-index: 400;
 }
-
-.aside {
- 
+/* aqui e estilo  gallery */
+.gallery img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+.gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+  .modal-dialog {
+      max-width: 100%;
+  }
 }
