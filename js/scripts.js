@@ -103,13 +103,21 @@ document.addEventListener("DOMContentLoaded", function () {
 }
  
 //botao para nav do aside
-document.getElementById("toggleAside").addEventListener("click", function () {
+const toggleAside = document.getElementById("toggleAside");
+const closeAside = document.getElementById("closeAside");
+
+if (toggleAside) {
+  toggleAside.addEventListener("click", function () {
     document.getElementById("sidebar").style.transform = "translateX(0)";
   });
+}
 
-  document.getElementById("closeAside").addEventListener("click", function () {
+if (closeAside) {
+  closeAside.addEventListener("click", function () {
     document.getElementById("sidebar").style.transform = "translateX(100%)";
   });
+}
+
   //modal galeria
   function openModal(imageSrc) {
     document.getElementById('modalImage').src = imageSrc;
